@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.wacmachinetest.domain.model.HomeItemType
 import com.example.wacmachinetest.presentation.ui.theme.WACMachineTestTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,7 +29,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting(viewModel.state.homeData.toString())
+                    viewModel.state.homeData?.forEach {
+                        when(it.type){
+                            HomeItemType.BANNER_SLIDER -> CustomSlider(sliderList = it.contents)
+                            HomeItemType.BANNER_SINGLE -> BannerSingle(image = it.imageUrl)
+                            else -> {}
+                        }
+                    }
+
                 }
             }
         }
