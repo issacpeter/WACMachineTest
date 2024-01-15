@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WACMachineTest</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="featured_products">Featured Products</string>
+    <string name="categories">Categories</string>
+    <string name="view_all">View all</string>
+    <string name="sale_off_percentage">Sale 65% Off</string>
+    <string name="price_unit">৳100 ৳300</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="cart">Cart</string>
+    <string name="offers">Offers</string>
+    <string name="account">Account</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.wacmachinetest.model
+package com.example.wacmachinetest.domain.model
 
 data class Content(
     val actual_price: String,

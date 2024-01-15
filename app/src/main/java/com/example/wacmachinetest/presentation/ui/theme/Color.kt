@@ -1,4 +1,4 @@
-package com.example.wacmachinetest.ui.theme
+package com.example.wacmachinetest.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

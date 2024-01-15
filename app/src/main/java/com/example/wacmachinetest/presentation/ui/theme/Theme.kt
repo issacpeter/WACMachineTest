@@ -1,4 +1,4 @@
-package com.example.wacmachinetest.ui.theme
+package com.example.wacmachinetest.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
