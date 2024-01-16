@@ -26,20 +26,28 @@ fun BannerSlider(
         pageCount = { contents.size }
     )
 
-    HorizontalPager(
-        state = pagerState,
-        modifier = Modifier.fillMaxWidth()
-    ) { page ->
-        AsyncImage(
-            model = contents[page].image_url,
-            contentDescription = "Image",
+    Box(modifier = Modifier.fillMaxWidth()){
+        HorizontalPager(
+            state = pagerState,
+            modifier = Modifier.fillMaxWidth()
+        ) { page ->
+            AsyncImage(
+                model = contents[page].image_url,
+                contentDescription = "Image",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .aspectRatio(16f / 9f)
+            )
+        }
+
+        PagerIndicator(
+            pagerState = pagerState,
             modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(16f / 9f)
-        )
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 24.dp),
+            )
     }
 
-    PagerIndicator(pagerState = pagerState)
 }
 
 @OptIn(ExperimentalFoundationApi::class)

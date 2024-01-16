@@ -46,8 +46,8 @@ class MainActivity : ComponentActivity() {
                                         BannerSlider(it.contents)
                                     }
                                 }
-
                                 HomeItemType.BANNER_SINGLE -> BannerSingle(image = it.imageUrl)
+                                HomeItemType.PRODUCTS -> ProductsList(it.title, it.contents)
                                 else -> {}
                             }
                         }

@@ -16,7 +16,11 @@ import coil.compose.AsyncImage
 fun BannerSingle(image: String) {
     AsyncImage(
         modifier = Modifier.fillMaxWidth()
-            .padding(16.dp)
+            .padding(
+                top = 16.dp,
+                start = 16.dp,
+                end = 16.dp,
+            )
             .clip(shape = RoundedCornerShape(
                 topStart = 10.dp,
                 topEnd = 10.dp,
