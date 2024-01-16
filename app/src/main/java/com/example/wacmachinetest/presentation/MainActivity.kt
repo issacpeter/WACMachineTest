@@ -48,6 +48,7 @@ class MainActivity : ComponentActivity() {
                                 }
                                 HomeItemType.BANNER_SINGLE -> BannerSingle(image = it.imageUrl)
                                 HomeItemType.PRODUCTS -> ProductsList(it.title, it.contents)
+                                HomeItemType.CATEGORIES -> Categories(it.title, it.contents)
                                 else -> {}
                             }
                         }

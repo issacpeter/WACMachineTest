@@ -1,13 +1,11 @@
 package com.example.wacmachinetest.presentation
 
-import android.widget.RatingBar
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -42,46 +40,12 @@ fun ProductsList(
     contents: List<Content>
 ){
     Column {
-        ProductListTitle(title = title)
+        HorizontalListTitle(title = title)
         LazyRow {
             items(contents) { content ->
                 ProductItem(content = content)
             }
         }
-    }
-}
-
-@Composable
-fun ProductListTitle(
-    title: String
-){
-    Row(
-        modifier = Modifier.padding(
-            top = 16.dp,
-            start = 16.dp,
-            end = 16.dp,
-        )
-    ) {
-        Text(
-            text = title,
-            style = TextStyle(
-                fontSize = 16.sp,
-                fontFamily = FontFamily(Font(R.font.poppins_regular)),
-                fontWeight = FontWeight(400),
-                color = Color.Black,
-            ),
-            modifier = Modifier.weight(1f)
-        )
-        Text(
-            text = stringResource(id = R.string.view_all),
-            style = TextStyle(
-                fontSize = 12.sp,
-                fontFamily = FontFamily(Font(R.font.poppins_regular)),
-                fontWeight = FontWeight(400),
-                color = Color.Black,
-            ),
-        )
-
     }
 }
 
