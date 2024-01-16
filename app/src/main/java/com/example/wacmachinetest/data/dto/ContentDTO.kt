@@ -5,19 +5,19 @@ import com.squareup.moshi.Json
 
 data class ContentDTO(
     @field:Json(name = "actual_price")
-    val actual_price: String? = null,
+    val actualPrice: String? = null,
     @field:Json(name = "discount")
     val discount: String? = null,
     @field:Json(name = "image_url")
-    val image_url: String? = null,
+    val imageUrl: String? = null,
     @field:Json(name = "offer_price")
-    val offer_price: String? = null,
+    val offerPrice: String? = null,
     @field:Json(name = "product_image")
-    val product_image: String? = null,
+    val productImage: String? = null,
     @field:Json(name = "product_name")
-    val product_name: String? = null,
+    val productName: String? = null,
     @field:Json(name = "product_rating")
-    val product_rating: Int? = null,
+    val productRating: Int? = null,
     @field:Json(name = "sku")
     val sku: String? = null,
     @field:Json(name = "title")
@@ -25,13 +25,13 @@ data class ContentDTO(
 )
 
 fun ContentDTO.toDomain() = Content(
-    actual_price = actual_price.orEmpty(),
+    actual_price = actualPrice.orEmpty(),
     discount = discount.orEmpty(),
-    image_url = image_url.orEmpty(),
-    offer_price = offer_price.orEmpty(),
-    product_image = product_image.orEmpty(),
-    product_name = product_name.orEmpty(),
-    product_rating = product_rating?:0,
+    image_url = imageUrl.orEmpty(),
+    offer_price = offerPrice.orEmpty(),
+    product_image = productImage.orEmpty(),
+    product_name = productName.orEmpty(),
+    product_rating = productRating?:0,
     sku = sku.orEmpty(),
     title = title.orEmpty()
 )

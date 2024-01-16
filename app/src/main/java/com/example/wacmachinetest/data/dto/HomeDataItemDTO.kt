@@ -5,7 +5,7 @@ import com.example.wacmachinetest.domain.model.HomeItemType
 import com.squareup.moshi.Json
 
 data class HomeDataItemDTO(
-    @field:Json(name = "content")
+    @field:Json(name = "contents")
     val contentDTO: List<ContentDTO>? = emptyList(),
     @field:Json(name = "id")
     val id: String? = null,
