@@ -83,8 +83,8 @@ fun ProductItem(
             Card(
                 shape = RoundedCornerShape(10.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = Color(0xFFFB7B4E), //Card background color
-                    contentColor = Color.Black  //Card content color,e.g.text
+                    containerColor = Color(0xFFFB7B4E),
+                    contentColor = Color.Black
                 )
             ) {
                 Text(
